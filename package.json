@@ -1,0 +1,34 @@
+{
+  "name": "istanbul-jspm-coverage-example",
+  "version": "0.1.0",
+  "homepage": "https://github.com/typhonjs-demos/istanbul-jspm-coverage-example/",
+  "description": "Presently Istanbul doesn't have a hook for coverage of tests using JSPM; this is a test repo.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-demos/istanbul-jspm-coverage-example/istanbul-jspm-coverage-example.git"
+  },
+  "jspm": {
+    "dependencies": {
+      "underscore": "npm:underscore@^1.8.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.34",
+      "babel-runtime": "npm:babel-runtime@^5.8.34",
+      "core-js": "npm:core-js@^1.2.1"
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "istanbul": "^1.0.0-alpha",
+    "jspm": "^0.16.19",
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test-jspm": "babel-node ./node_modules/.bin/istanbul cover _mocha -- --bail 'test/src/jspm/jspm.js'",
+    "test-vanilla": "babel-node ./node_modules/.bin/istanbul cover _mocha -- --bail 'test/src/vanilla/vanilla.js'"
+  }
+}
