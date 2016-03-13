@@ -1,12 +1,12 @@
 {
   "name": "istanbul-jspm-coverage-example",
   "version": "0.1.0",
-  "homepage": "https://github.com/typhonjs-demos/istanbul-jspm-coverage-example/",
+  "homepage": "https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/",
   "description": "Provides an example of instrumenting JSPM / SystemJS for code coverage with Istanbul / Mocha.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typhonjs-demos/istanbul-jspm-coverage-example/istanbul-jspm-coverage-example.git"
+    "url": "https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/istanbul-jspm-coverage-example.git"
   },
   "jspm": {
     "dependencies": {
@@ -20,9 +20,12 @@
   },
   "devDependencies": {
     "jspm": "^0.16.0",
+    "typhonjs-config-eslint": "^0.4.0",
     "typhonjs-npm-build-test": "^0.0.12"
   },
   "scripts": {
+    "esdoc": "esdoc -c .esdocrc",
+    "eslint": "eslint .",
     "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul-report.js"
   }
 }
