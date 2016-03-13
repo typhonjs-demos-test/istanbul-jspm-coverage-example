@@ -10,6 +10,7 @@ jspm.setPackagePath(process.cwd());
 // Create SystemJS Loader
 const System = new jspm.Loader();
 
+// Replaces System.translate with version that provides Istanbul instrumentation.
 instrumentIstanbulSystem(System);
 
 describe('JSPM', () =>
