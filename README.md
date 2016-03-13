@@ -1,29 +1,34 @@
 # istanbul-jspm-coverage-example
-Presently Istanbul doesn't have a hook for coverage of tests using JSPM / SystemJS; this is a test repo.
+At one point in time [Istanbul](https://gotwarlost.github.io/istanbul/) didn't have a hook for coverage of tests using [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs).
 
 Please refer to the following issues:
 - [Istanbul Issue #498](https://github.com/gotwarlost/istanbul/issues/498)
 - [SystemJS Issue #992](https://github.com/systemjs/systemjs/issues/992)
 
-When a solution is finalized this repo will live on as an example integration.
+A solution is now available that replaces the System.translate function with one that instruments code coverage that is easily setup from standard testing environments including Mocha.
 
-Update:
-- [Guy Bedford mentions a possible hook implementation for Istanbul for SystemJS](https://github.com/systemjs/systemjs/issues/992#issue-123994098)
+In particular please review the following NPM modules:
+- [typhonjs-istanbul-instrument-jspm](https://www.npmjs.com/package/typhonjs-istanbul-instrument-jspm)
+- [typhonjs-npm-build-test](https://www.npmjs.com/package/typhonjs-npm-build-test)
+
+`typhonjs-istanbul-instrument-jspm` provides the instrumentation hook. 
+
+`typhonjs-npm-build-test` provides an all inclusive NPM module with dependencies for building / testing / publishing NPM modules and instrumenting JSPM / SystemJS tests.
+
+Please note that Node 5+ / NPM 3+ may be required due to flat package installation introduced in NPM v3.
 
 To setup:
 - npm install -g jspm  (if not already installed globally)
 - npm install
 - jspm install
 
-To run tests:
-- npm run test-jspm    (shows that a test w/ JSPM does not provide coverage w/ Istanbul)
-- npm run test-vanilla (shows that the setup works for vanilla ES6 / coverage generated)
+To run tests with coverage for SystemJS:
+- npm run test-coverage
 
-Test scripts are defined in [package.json](https://github.com/typhonjs-demos/istanbul-jspm-coverage-example/blob/master/package.json#L31-L32)
+A coverage report is then available in `./coverage` and contains the source code in [./src](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/tree/master/src) loaded by SystemJS in [./test/src/TestJSPM.js](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/blob/master/test/src/TestJSPM.js)
 
-Output:
-- This is what the vanilla test looks like and shows coverage running
-![vanilla test](http://i.imgur.com/1lsGLl8.png)
+Test scripts are defined in [package.json](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/blob/master/package.json#L27-L29)
 
-- This is what the JSPM test looks like and shows no coverage running :(
-![vanilla test](http://i.imgur.com/kVzJK6x.png)
+The hook implementation can be viewed here: [instrumentIstanbulSystem.js](https://github.com/typhonjs-node-jspm/typhonjs-istanbul-instrument-jspm/blob/master/src/instrumentIstanbulSystem.js)
+
+As a bonus examples of using ESLint and ESDoc which is included in `typhonjs-npm-build-test` are also available as NPM scripts.
