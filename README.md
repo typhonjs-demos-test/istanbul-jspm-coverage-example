@@ -29,4 +29,6 @@ A coverage report is then available in `./coverage` and contains the source code
 
 Test scripts are defined in [package.json](https://github.com/typhonjs-demos-test/istanbul-jspm-coverage-example/blob/master/package.json#L27-L29)
 
+The hook implementation can be viewed here: [instrumentIstanbulSystem.js](https://github.com/typhonjs-node-jspm/typhonjs-istanbul-instrument-jspm/blob/master/src/instrumentIstanbulSystem.js)
+
 As a bonus examples of using ESLint and ESDoc which is included in `typhonjs-npm-build-test` are also available as NPM scripts.
