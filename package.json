@@ -21,7 +21,7 @@
   "devDependencies": {
     "jspm": "^0.16.0",
     "typhonjs-config-eslint": "^0.4.0",
-    "typhonjs-npm-build-test": "^0.0.12"
+    "typhonjs-npm-build-test": "^0.1.0"
   },
   "scripts": {
     "esdoc": "esdoc -c .esdocrc",
