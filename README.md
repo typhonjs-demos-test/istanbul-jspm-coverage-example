@@ -1,5 +1,5 @@
 # istanbul-jspm-coverage-example
-At one point in time Istanbul didn't have a hook for coverage of tests using JSPM / SystemJS.
+At one point in time [Istanbul](https://gotwarlost.github.io/istanbul/) didn't have a hook for coverage of tests using [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs).
 
 Please refer to the following issues:
 - [Istanbul Issue #498](https://github.com/gotwarlost/istanbul/issues/498)
@@ -13,7 +13,9 @@ In particular please review the following NPM modules:
 
 `typhonjs-istanbul-instrument-jspm` provides the instrumentation hook. 
 
-`typhonjs-npm-build-test` provides an all inclusive 
+`typhonjs-npm-build-test` provides an all inclusive NPM module with dependencies for building / testing / publishing NPM modules and instrumenting JSPM / SystemJS tests.
+
+Please note that Node 5+ / NPM 3+ may be required due to flat package installation introduced in NPM v3.
 
 To setup:
 - npm install -g jspm  (if not already installed globally)
