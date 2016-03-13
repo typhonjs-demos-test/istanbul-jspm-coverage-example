@@ -1,0 +1,16 @@
+/**
+ * You can provide comments in `.npmscriptrc`
+ */
+{
+   "test":
+   {
+      "travis":
+      {
+         "report": "cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+         "istanbul": { "command": "cover", "options": ["--report lcovonly"] }
+      },
+
+      "istanbul": { "command": "cover" },
+      "mocha": { "source": "./test/src", "options": [ "--compilers js:babel-register", "-t 120000 --recursive" ] }
+   }
+}
