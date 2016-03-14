@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/typhonjs-demos-test/istanbul-jspm-coverage-example.svg?branch=master)](https://travis-ci.org/typhonjs-demos-test/istanbul-jspm-coverage-example)
 [![Coverage](https://img.shields.io/codecov/c/github/typhonjs-demos-test/istanbul-jspm-coverage-example.svg)](https://codecov.io/github/typhonjs-demos-test/istanbul-jspm-coverage-example)
-[![Dependency Status](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624))
+[![Dependency Status](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624)
 
 At one point in time [Istanbul](https://gotwarlost.github.io/istanbul/) didn't have a hook for coverage of tests using [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs). 
 
