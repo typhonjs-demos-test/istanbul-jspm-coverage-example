@@ -8,7 +8,7 @@
 [![Coverage](https://img.shields.io/codecov/c/github/typhonjs-demos-test/istanbul-jspm-coverage-example.svg)](https://codecov.io/github/typhonjs-demos-test/istanbul-jspm-coverage-example)
 [![Dependency Status](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56e69b2cdf573d00472cd624)
 
-At one point in time [Istanbul](https://gotwarlost.github.io/istanbul/) didn't have a hook for coverage of tests using [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs). 
+At one point in time [Istanbul](https://github.com/istanbuljs) didn't have a hook for coverage of tests using [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs). 
 
 Please refer to the following issues:
 - [Istanbul Issue #498](https://github.com/gotwarlost/istanbul/issues/498)
